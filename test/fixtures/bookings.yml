@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  game: one
+  start_date: 2021-02-07
+  end_date: 2021-02-07
+
+two:
+  user: two
+  game: two
+  start_date: 2021-02-07
+  end_date: 2021-02-07
