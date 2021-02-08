@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+  end
+  
   def new
     # @game = Game.find(params[:game_id])
     @booking = Booking.new
@@ -12,7 +16,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to root_path
     else
-      render new
+      render :new
     end
   end
 
