@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  has_one :game
+  belongs_to :game
 
   validates :start_date, :end_date, presence: true
 
