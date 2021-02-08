@@ -16,7 +16,7 @@ require("channels")
 document.addEventListener('turbolinks:load', () => {
   flatpickr('.datepicker', {
     altInput: true,
-    enableTime: true,
+    // enableTime: true,
     "disable": [
       function(date) {
           // return true to disable
@@ -26,6 +26,12 @@ document.addEventListener('turbolinks:load', () => {
   "locale": {
       "firstDayOfWeek": 0 // start week on Sunday
   }
+  });
+
+  flatpickr('.timepicker', {
+    altInput: true,
+    enableTime: true,
+    noCalendar: true,
   });
 });
 

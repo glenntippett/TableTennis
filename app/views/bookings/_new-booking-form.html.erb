@@ -1,17 +1,23 @@
 <%= simple_form_for @booking do |f| %>
   <%= f.input :start_date,
-  label: 'Start Time',
+  label: 'Start Date',
   as: :string,
   input_html: { class: 'datepicker' },
   html5: true,
   start_day: Date.today.day %>
 
-  <%= f.input :end_date,
+  <%= f.input :start_time,
+  label: 'Start Time',
+  as: :string,
+  input_html: { class: 'timepicker' },
+  html5: true %>
+
+   <%= f.input :end_time,
   label: 'End Time',
   as: :string,
-  input_html: { class: 'datepicker' },
-  html5: true,
-  start_day: Date.today.day %>
+  input_html: { class: 'timepicker' },
+  html5: true %>
+
   <%= f.submit 'Confirm booking', class: 'btn btn-success' %>
   <%= link_to 'Cancel', root_path, class: 'btn btn-outline-danger' %>
 <% end %>
