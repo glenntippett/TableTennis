@@ -4,8 +4,9 @@
 // that code so it'll be compiled.
 
 
-import 'plugins/flatpickr';
-
+import flatpickr from "flatpickr";
+import 'flatpickr/dist/themes/material_orange.css';
+import 'bootstrap';
 
 require("@rails/ujs").start()
 require("turbolinks").start()
