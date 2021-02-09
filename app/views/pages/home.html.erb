@@ -1,21 +1,21 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
+  <div class='d-flex py-5 justify-content-center'>
+    <h2 class="px-3">Message Board</h2>
+    <%= link_to new_post_path, class: 'btn btn-sm btn-primary' do %>
+      <i class="fas fa-plus"></i> New message
+    <% end %>
+  </div>
 
-      <h2>Message Board</h2>
-
-      <% @posts.each do |post| %>
-        <h3><%= post.title %></h3>
-        <span class="text-muted"><strong>Posted by: </strong><em><%= post.user.email.split('@')[0] %></em></span>
-        <p><%= post.content %></p>
-        <% if post.user == current_user %>
-          <%= link_to 'Remove my post', 
-            post_path(post), 
-            method: :delete, 
-            data: {confirm: "Remove post?"},
-            class: 'text-danger' %>
+  <% @posts.each do |post| %>
+  <div class="card my-4 p-4 shadow-sm">
+      <h3><%= post.title %></h3>
+      <span class="text-muted"><strong>Posted by: </strong><em><%= post.user.email.split('@')[0] %></em></span>
+      <p><%= post.content %></p>
+      <% if post.user == current_user %>
+        <%= link_to post_path(post), method: :delete, data: {confirm: "Remove post?"}, class: 'text-danger' do %>
+          <i class="fas fa-trash-alt"></i>
         <% end %>
       <% end %>
-    </div>
   </div>
+  <% end %>
 </div>
