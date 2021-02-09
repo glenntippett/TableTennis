@@ -1,0 +1,10 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title,
+  label: 'Title' %>
+
+  <%= f.input :content,
+  label: 'Content' %>
+
+  <%= f.submit 'Submit', class: 'btn btn-success' %>
+  <%= link_to 'Cancel', root_path, class: 'btn btn-outline-danger' %>
+<% end %>
