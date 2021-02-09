@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   resources :bookings, only: %i[new create index destroy]
 
-  resources :posts, only: %i[new]
+  resources :posts, only: %i[new create]
 
 end

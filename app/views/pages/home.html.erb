@@ -1,9 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Pages#home</h1>
-      <%= link_to 'New Booking', new_booking_path, class: 'btn btn-primary' %>
-      <%= link_to 'View my Bookings', bookings_path, class: 'btn btn-primary' %>
+      <h2>Message Board</h2>
+      <% @posts.each do |post| %>
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+      <% end %>
     </div>
   </div>
 </div>
