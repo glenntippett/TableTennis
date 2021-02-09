@@ -7,7 +7,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
@@ -16,6 +15,10 @@
             <%= link_to 'New Booking', new_booking_path %>
           </span>
         </li>
+        <li class="nav-item">
+          <span class="nav-link">
+            <%= link_to 'Post', new_post_path %>
+          </span></li>
         <li class="nav-item">
           <span class="nav-link"><%= current_user.email %></span>
         </li>
